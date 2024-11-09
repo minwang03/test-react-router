@@ -1,7 +1,9 @@
+import AppRoutes from './router/AppRoutes.jsx';
+
 function App() {
   return (
-    <div>
-      Hello World!!!
+    <div className="App">
+      <AppRoutes />
     </div>
   );
 }

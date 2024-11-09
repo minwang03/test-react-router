@@ -1,0 +1,47 @@
+nav {
+    background-color: #333; /* Màu nền tối cho navbar */
+    padding: 10px 20px; /* Padding để tạo khoảng cách */
+  }
+  
+  nav ul {
+    display: flex; /* Dùng flexbox để căn chỉnh các mục ngang */
+    justify-content: center; /* Căn giữa các mục */
+    list-style: none; /* Bỏ dấu chấm đầu dòng */
+    padding: 0; /* Xóa padding mặc định */
+    margin: 0; /* Xóa margin mặc định */
+  }
+  
+  nav ul li {
+    margin: 0 20px; /* Khoảng cách giữa các mục */
+  }
+  
+  nav ul li a {
+    color: white; /* Màu chữ trắng */
+    text-decoration: none; /* Xóa gạch dưới mặc định */
+    font-size: 16px; /* Cỡ chữ vừa phải */
+    font-weight: 500; /* Cân bằng độ đậm của chữ */
+    transition: color 0.3s ease, transform 0.3s ease; 
+  }
+  
+  nav ul li a:hover {
+    color: #4CAF50; /* Màu chữ khi hover */
+    transform: scale(1.1); /* Phóng to chữ khi hover */
+  }
+  
+  /* Tạo hiệu ứng cho Navbar khi di chuyển chuột */
+  nav ul li a:focus, nav ul li a:active {
+    outline: none; /* Xóa outline khi click */
+  }
+  
+  @media (max-width: 768px) {
+    /* Thiết lập Navbar cho màn hình nhỏ (Responsive) */
+    nav ul {
+      flex-direction: column; /* Chuyển các mục navbar thành cột */
+      align-items: center; /* Căn giữa các mục */
+    }
+  
+    nav ul li {
+      margin: 10px 0; /* Khoảng cách giữa các mục theo chiều dọc */
+    }
+  }
+  
