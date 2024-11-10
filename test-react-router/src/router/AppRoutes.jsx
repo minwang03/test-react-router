@@ -5,6 +5,7 @@ import About from '../components/About';
 import Contact from '../components/Contact';
 import ContactInfo from '../components/ContactInfo';
 import ContactSupport from '../components/ContactSupport';
+import ProductInfo from '../components/ProductInfo';
 import NotFound from '../components/NotFound';
 
 const AppRoutes = () => {
@@ -13,14 +14,15 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="product/:productId" element={<ProductInfo />} /> {/* Dynamic route */}
           <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
           <Route path="contact" element={<Contact />}>
             {/* Các route con của Contact */}
             <Route path="info" element={<ContactInfo />} />
             <Route path="support" element={<ContactSupport />} />
           </Route>
         </Route>
+  
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
