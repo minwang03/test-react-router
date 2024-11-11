@@ -1,6 +1,6 @@
 import { Link, Outlet } from 'react-router-dom';
 
-const Contact = () => {
+function Contact() {
   return (
     <div>
       <h1>Trang Liên Hệ</h1>
@@ -11,6 +11,5 @@ const Contact = () => {
       <Outlet />
     </div>
   );
-};
-
+}
 export default Contact;

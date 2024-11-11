@@ -1,13 +1,12 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
-  const products = [
-    { id: 1, name: 'Product 1' },
-    { id: 2, name: 'Product 2' },
-    { id: 3, name: 'Product 3' },
-  ];
+const products = [
+  { id: 1, name: 'Product 1' },
+  { id: 2, name: 'Product 2' },
+  { id: 3, name: 'Product 3' },
+];
 
+function Home() {
   return (
     <div>
       <h1>Home Page</h1>
@@ -19,9 +18,7 @@ const Home = () => {
           </li>
         ))}
       </ul>
-      
     </div>
   );
-};
-
+}
 export default Home;
