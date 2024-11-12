@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import { NavLink } from 'react-router-dom';
 
 function About() {
   return (
@@ -6,6 +7,7 @@ function About() {
       <Navbar />
       <h1>Giới Thiệu</h1>
       <p>Đây là trang giới thiệu.</p>
+      <NavLink to="/contact" activeClassName="active">Liên Hệ</NavLink>
     </div>
   );
 }
