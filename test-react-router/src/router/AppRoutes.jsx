@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from '../layout/Layout';
 import Home from '../components/Home';
 import About from '../components/About';
@@ -8,15 +8,16 @@ import ContactSupport from '../components/ContactSupport';
 import ProductInfo from '../components/ProductInfo';
 import NotFound from '../components/NotFound';
 
-const AppRoutes = () => {
+function AppRoutes() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          
+          <Route path="home" element={<Home />} />
+          <Route path='/' element={<Navigate to="home" replace />} /> {/* Navigate route */}
+
           <Route path="product/:productId" element={<ProductInfo />} /> {/* Dynamic route */}
-          
+
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />}>
             {/* Các route con của Contact */}
@@ -24,11 +25,11 @@ const AppRoutes = () => {
             <Route path="support" element={<ContactSupport />} />
           </Route>
         </Route>
-  
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
-};
+}
 
 export default AppRoutes;

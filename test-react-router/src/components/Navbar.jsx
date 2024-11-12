@@ -12,7 +12,7 @@ function Navbar() {
           <Link to="/about">Giới Thiệu</Link>
         </li>
         <li>
-          <Link to="/contact">Liên Hệ</Link>
+          <Link to="/contact" >Liên Hệ</Link>
         </li>
       </ul>
     </nav>
