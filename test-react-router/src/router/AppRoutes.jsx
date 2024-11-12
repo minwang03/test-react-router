@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter , Routes, Route, Navigate } from 'react-router-dom';
 import Layout from '../layout/Layout';
 import Home from '../components/Home';
 import About from '../components/About';
@@ -10,25 +10,22 @@ import NotFound from '../components/NotFound';
 
 function AppRoutes() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="home" element={<Home />} />
           <Route path='/' element={<Navigate to="home" replace />} /> {/* Navigate route */}
-
-          <Route path="product/:productId" element={<ProductInfo />} /> {/* Dynamic route */}
-
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />}>
             {/* Các route con của Contact */}
             <Route path="info" element={<ContactInfo />} />
             <Route path="support" element={<ContactSupport />} />
-          </Route>
+          </Route>   
+          <Route path="product/:productId" element={<ProductInfo />} /> {/* Dynamic route */}
         </Route>
-
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
