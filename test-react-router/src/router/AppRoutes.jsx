@@ -14,7 +14,6 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="home" element={<Home />} />
-          <Route path='/' element={<Navigate to="home" replace />} /> {/* Navigate route */}
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />}>
             {/* Các route con của Contact */}
@@ -22,6 +21,7 @@ function AppRoutes() {
             <Route path="support" element={<ContactSupport />} />
           </Route>   
           <Route path="product/:productId" element={<ProductInfo />} /> {/* Dynamic route */}
+          <Route path='/' element={<Navigate to="home" replace />} /> {/* Navigate route */}
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
