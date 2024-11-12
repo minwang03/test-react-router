@@ -1,5 +1,4 @@
-import { BrowserRouter , Routes, Route, Navigate } from 'react-router-dom';
-import Layout from '../layout/Layout';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from '../components/Home';
 import About from '../components/About';
 import Contact from '../components/Contact';
@@ -12,17 +11,15 @@ function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="home" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />}>
-            {/* Các route con của Contact */}
-            <Route path="info" element={<ContactInfo />} />
-            <Route path="support" element={<ContactSupport />} />
-          </Route>   
-          <Route path="product/:productId" element={<ProductInfo />} /> {/* Dynamic route */}
-          <Route path='/' element={<Navigate to="home" replace />} /> {/* Navigate route */}
+        <Route path="/" element={<Navigate to="home" replace />} />
+        <Route path="home" element={<Home />} />
+        <Route path="about" element={<About/>} />
+        <Route path="about" element={<Navigate to="/contact" replace />} />
+        <Route path="contact" element={<Contact />}>
+          <Route path="info" element={<ContactInfo />} />
+          <Route path="support" element={<ContactSupport />} />
         </Route>
+        <Route path="product/:productId" element={<ProductInfo />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

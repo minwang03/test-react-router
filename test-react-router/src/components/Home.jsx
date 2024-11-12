@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const products = [
   { id: 1, name: 'Product 1' },
@@ -9,6 +10,7 @@ const products = [
 function Home() {
   return (
     <div>
+      <Navbar />
       <h1>Home Page</h1>
       <h2>Product List</h2>
       <ul>
