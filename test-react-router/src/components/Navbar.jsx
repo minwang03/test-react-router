@@ -6,7 +6,7 @@ function Navbar() {
     <nav>
       <ul>
         <li>
-          <Link to="/">Trang Chủ</Link>
+          <Link to="/home">Trang Chủ</Link>
         </li>
         <li>
           <Link to="/about">Giới Thiệu</Link>

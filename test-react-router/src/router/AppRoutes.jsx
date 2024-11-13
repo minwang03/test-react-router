@@ -11,16 +11,13 @@ function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="home" element={<Home />} />
-        {/* <Route path="about" element={<Navigate to="/contact" replace />} /> */}
         <Route path="about" element={<About />} />
-        {/* <Route path="contact" element={<Navigate to="info" replace />} /> */}
         <Route path="contact" element={<Contact />}>
           <Route path="info" element={<ContactInfo />} />
           <Route path="support" element={<ContactSupport />} />
         </Route>
-        
+        <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="product/:productId" element={<ProductInfo />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
